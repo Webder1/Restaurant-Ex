@@ -1,0 +1,214 @@
+/* Reset & base */
+* {
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+body {
+  margin: 0;
+  background: linear-gradient(to bottom right, #fef9f8, #ffe6dc);
+  color: #333;
+}
+header {
+  background: linear-gradient(to right, #ff9966, #ff5e62);
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+header h1 {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+}
+header p.intro-text {
+  margin-top: 0.5rem;
+  font-weight: 400;
+  font-size: 1.15rem;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+label {
+  display: block;
+  margin-top: 1.5rem;
+  font-weight: 500;
+  color: #5a3e24;
+  letter-spacing: 0.02em;
+}
+
+select, input[type="email"], textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin-top: 0.5rem;
+  border: 1.5px solid #d98f6d;
+  border-radius: 0.7rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  resize: vertical;
+}
+
+select:focus, input[type="email"]:focus, textarea:focus {
+  border-color: #ff5e62;
+  box-shadow: 0 0 0 3px rgba(255, 94, 98, 0.25);
+  outline: none;
+}
+
+.stars {
+  display: flex;
+  gap: 8px;
+  margin-top: 0.5rem;
+  user-select: none;
+}
+
+.star {
+  font-size: 2rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.15s ease;
+  user-select: none;
+}
+
+.star.hovered,
+.star.selected {
+  color: #ff5e62;
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 2px #ff5e62);
+}
+
+.feedback-followup {
+  margin-top: 1rem;
+}
+
+.feedback-followup label {
+  margin-top: 1.3rem;
+  font-weight: 600;
+  color: #b75226;
+}
+
+.feedback-followup textarea {
+  min-height: 80px;
+}
+
+.submit-btn {
+  margin-top: 2rem;
+  background: linear-gradient(to right, #ff9966, #ff5e62);
+  border: none;
+  padding: 1rem 2rem;
+  color: white;
+  font-weight: 700;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+  width: 100%;
+  font-size: 1.25rem;
+  letter-spacing: 0.1em;
+  box-shadow: 0 6px 12px rgba(255, 94, 98, 0.5);
+}
+
+.submit-btn:hover {
+  background: linear-gradient(to right, #ff5e62, #ff9966);
+  transform: translateY(-2px);
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(68, 51, 42, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-content {
+  background: #fff1e6;
+  padding: 2rem 3rem;
+  border-radius: 1.2rem;
+  text-align: center;
+  max-width: 420px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.25);
+  color: #5a3e24;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+
+.modal-content p {
+  font-weight: 400;
+  margin-bottom: 1.8rem;
+  line-height: 1.4;
+  font-size: 1.1rem;
+}
+
+.modal-content button {
+  background: linear-gradient(90deg, #e36414, #9a3412);
+  border: none;
+  padding: 0.8rem 2rem;
+  color: white;
+  font-weight: 700;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.modal-content button:hover {
+  background: #7f2f10;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    margin: 1rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+  }
+
+  .stars {
+    font-size: 1.8rem;
+  }
+
+  header {
+    padding: 1.5rem 1rem 1rem;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header p.intro-text {
+    font-size: 1rem;
+  }
+
+  .submit-btn {
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+}
