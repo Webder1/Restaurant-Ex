@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fatto a Mano Dessert Feedback</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Fatto a Mano Dessert Feedback</h1>
+    </header>
+    <div class="container">
+      <form action="https://formspree.io/f/xdkdkryv" method="POST">
+        <label for="dessert">Which dessert did you try?</label>
+        <select name="dessert" id="dessert" required>
+          <option value="" disabled selected>Select a dessert</option>
+          <option value="Tiramisu">Tiramisu</option>
+          <option value="Scugnizzielli Nutella & Gelato">Scugnizzielli Nutella & Gelato</option>
+          <option value="Affogato">Affogato</option>
+          <option value="Affogato Limoncello">Affogato Limoncello</option>
+          <option value="Digestivi - Limoncello">Digestivi – Limoncello</option>
+          <option value="Digestivi - Amaro Montenegro">Digestivi – Amaro Montenegro</option>
+          <option value="Digestivi - Sambuca">Digestivi – Sambuca</option>
+          <option value="Coffee - Espresso">Coffee – Espresso</option>
+          <option value="Coffee - Macchiato">Coffee – Macchiato</option>
+          <option value="Coffee - Cappuccino">Coffee – Cappuccino</option>
+          <option value="Coffee - Latte">Coffee – Latte</option>
+        </select>
+
+        <label>How would you rate the dessert?</label>
+        <div class="stars" id="dessert-stars" data-input="dessertRating">
+          <span class="star" tabindex="0" data-value="1">&#9733;</span>
+          <span class="star" tabindex="0" data-value="2">&#9733;</span>
+          <span class="star" tabindex="0" data-value="3">&#9733;</span>
+          <span class="star" tabindex="0" data-value="4">&#9733;</span>
+          <span class="star" tabindex="0" data-value="5">&#9733;</span>
+        </div>
+        <input type="hidden" name="dessertRating" id="dessertRating" />
+
+        <label for="dessertReason">What led you to give this rating?</label>
+        <textarea name="dessertReason" id="dessertReason" placeholder="Tell us what stood out – good or bad"></textarea>
+
+        <label for="dessertImprove">What could we improve to make it a 5-star experience?</label>
+        <textarea name="dessertImprove" id="dessertImprove" placeholder="Your feedback helps us grow!"></textarea>
+
+        <label for="server">Who was your server?</label>
+        <select name="server" id="server" required>
+          <option value="" disabled selected>Select a server</option>
+          <option value="Alex">Alex</option>
+          <option value="Lucia">Lucia</option>
+          <option value="Marco">Marco</option>
+          <option value="Sofia">Sofia</option>
+        </select>
+
+        <label>How would you rate the service?</label>
+        <div class="stars" id="service-stars" data-input="serviceRating">
+          <span class="star" tabindex="0" data-value="1">&#9733;</span>
+          <span class="star" tabindex="0" data-value="2">&#9733;</span>
+          <span class="star" tabindex="0" data-value="3">&#9733;</span>
+          <span class="star" tabindex="0" data-value="4">&#9733;</span>
+          <span class="star" tabindex="0" data-value="5">&#9733;</span>
+        </div>
+        <input type="hidden" name="serviceRating" id="serviceRating" />
+
+        <label for="serviceReason">Why did you give this rating for service?</label>
+        <textarea name="serviceReason" id="serviceReason" placeholder="Helpful, slow, super friendly?"></textarea>
+
+        <label for="serviceImprove">How could we elevate the service to 5 stars?</label>
+        <textarea name="serviceImprove" id="serviceImprove" placeholder="Any suggestions are appreciated!"></textarea>
+
+        <label for="email">Email (optional – for thank you or follow-up)</label>
+        <input type="email" name="email" id="email" placeholder="your@email.com" />
+
+        <button type="submit" class="submit-btn">Submit Feedback</button>
+      </form>
+    </div>
+
+    <div class="modal" id="thankYouModal">
+      <div class="modal-content">
+        <h2>Grazie!</h2>
+        <p>Thank you for your feedback. We truly appreciate it!</p>
+        <button id="closeModal">Close</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
